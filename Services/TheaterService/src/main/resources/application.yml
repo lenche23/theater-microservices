@@ -1,0 +1,20 @@
+server:
+  port: 9030
+
+spring:
+  application:
+    name: theater-service
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: theatersDB
+    
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+      healthcheck:
+        enabled: true
+  instance:
+    prefer-ip-address: true

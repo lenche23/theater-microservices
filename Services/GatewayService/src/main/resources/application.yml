@@ -25,6 +25,18 @@ spring:
               args:
                 name: user-service-circuit-breaker
                 fallbackUri: forward:/user-service-circuit-breaker
+        - id: playings-service
+          uri: http://playings-service
+          predicates:
+            - Path=/playings-service/**
+        - id: play-service
+          uri: http://play-service
+          predicates:
+            - Path=/play-service/**
+        - id: theater-service
+          uri: http://theater-service
+          predicates:
+            - Path=/theater-service/**
 #        - id: load-balancer-service
 #          uri: http://load-balancer-service
 #          predicates:
