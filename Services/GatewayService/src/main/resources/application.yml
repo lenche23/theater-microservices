@@ -25,7 +25,7 @@ spring:
               args:
                 name: user-service-circuit-breaker
                 fallbackUri: forward:/user-service-circuit-breaker
-        - id: load-balancer-service
-          uri: http://load-balancer-service
-          predicates:
-            - Path=/load-balancer-service/**
+#        - id: load-balancer-service
+#          uri: http://load-balancer-service
+#          predicates:
+#            - Path=/load-balancer-service/**
